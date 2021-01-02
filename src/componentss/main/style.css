@@ -1,0 +1,6 @@
+.main {
+    width: 50%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}

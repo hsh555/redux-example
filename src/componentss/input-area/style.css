@@ -1,0 +1,25 @@
+.input-area {
+    display: flex;
+}
+
+.input-area input[type="text"] {
+    width: 90%;
+    height: 40px;
+    border: 1px solid #999;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.input-area button {
+    width: 10%;
+    background: darkcyan;
+    color: #fff;
+    font-weight: 700;
+    border: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}

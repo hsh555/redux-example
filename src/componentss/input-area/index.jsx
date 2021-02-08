@@ -9,7 +9,9 @@ const InputArea = () => {
     const dispatch = useDispatch();
 
     const handleAddNewCard = () => {
-        dispatch(addNewCardAction({ title: inputElement.current.value, id: cardId }));
+        if (inputElement.current.value.trim().length > 0) {
+            dispatch(addNewCardAction({ title: inputElement.current.value, id: cardId }));
+        }
         inputElement.current.value = '';
         inputElement.current.focus();
     }

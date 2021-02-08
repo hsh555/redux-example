@@ -2,7 +2,6 @@ import { createReducer } from "@reduxjs/toolkit";
 import MAIN_ACTION_TYPES from "./action-types";
 import initialState from "./state";
 
-
 const mainReducer = createReducer(initialState, {
     [MAIN_ACTION_TYPES.ADD_CARD]: (state, action) => {
         return {
@@ -28,15 +27,14 @@ const mainReducer = createReducer(initialState, {
             currentElementId: action.payload
         }
     }
-})
-
+});
 
 const editCardHandler = (cards, card) => {
     return cards.map(item => ({ ...item, title: card.id === item.id ? card.title : item.title }))
 }
 
 const deleteCardHandler = (cards, cardId) => {
-    return cards.filter(item => item.id != cardId)
+    return cards.filter(item => item.id !== cardId)
 }
 
 export default mainReducer;

@@ -17,7 +17,7 @@ const ContentArea = () => {
     }
 
     const HandleEditCard = (e) => {
-        if (e.keyCode == 13) {
+        if (e.keyCode === 13) {
             const id = e.currentTarget.nextSibling.id;
             dispatch(editCardAction({ title: e.currentTarget.value, id: Number(id) }));
             dispatch(currentElementIdAction(undefined));
